@@ -62,6 +62,7 @@ sudo apt update
 #opção do comando apt: install (install is followed by one or more package names)
 #opção da contra barra (\): criar uma quebra de linha no terminal
 sudo apt install iperf3 traceroute mtr vnstat apache2 php
+  Iniciar o Iperf3 automaticamente como um daemon?  <Yes>
 
 #baixando a dependência do Librespeed-Cli do Site Oficial do Ubuntu (link atualizado em: 30/12/2025)
 #opção do comando wget: -O (output file name)
@@ -283,8 +284,10 @@ curl -sL https://netrono.me/install-agent | sudo bash
 05) Enter the port number (default: 8200): <Enter>
 06) Enter disk mounts to include (comma-separated, e.g., /mnt/storage,/mnt/backup): <Enter>
 07) Enter disk mounts to exclude (comma-separated, e.g., /boot,/tmp): /boot,/tmp <Enter>
+08) Would you like to enable automatic daily updates? (y/n): y
 ```
 
+journalctl -u netronome-agent-update
 
 ========================================DESAFIOS=========================================
 
